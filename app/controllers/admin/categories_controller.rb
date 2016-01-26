@@ -37,7 +37,7 @@ class Admin::CategoriesController < Admin::BaseController
           return render(:partial => 'admin/content/categories')
         end
       end
-      return
+      #return
     end
     render 'new'
   end
