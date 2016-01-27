@@ -30,9 +30,10 @@ class Admin::CategoriesController < Admin::BaseController
     if params[:id].nil? and @category.nil?
       @category = Category.new      
     elsif not params[:id].nil?
-      @category = Category.find(params[:id])
-      @category.attributes = params[:category]
+      @category = Category.find(params[:id]) 
     end
+    @category.attributes = params[:category]
+
     if request.post?
       respond_to do |format|
         format.html { save_category }
